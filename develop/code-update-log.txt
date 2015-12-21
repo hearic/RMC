@@ -1,0 +1,38 @@
+| O 2014/08/17 [Version]    ——>Beta 2.4.7版：引发裂变中子平均能量输入，选取裂变产额
+| O 2014/07/02 [Version]    ——>Beta 2.4.6版：输出格式化输入文件
+| O 2014/06/29 [Version]    ——>Beta 2.4.5版：程序重构
+| O 2014/05/10 [Version]    ——>Beta 2.4.0版：固定源，fixed source
+| O 2014/04/13 [Version]    ——>Beta 2.3版
+| + 2014/04/13 Fix bug      修复错误：燃耗问题，多个燃耗区使用相同材料（非重复结构情况），liangjg
+| + 2014/01/21 Fix bug      修复错误：燃耗问题，通量计算错误（硼燃耗问题NPIC），liangjg
+| + 2014/01/19 Add feature  重复结构非重复材料输入（http://reallab.ep.tsinghua.edu.cn/thread-1969-1-1.html），liangjg
+| + 2014/01/15 Fix bug      修复错误：MeshTally网格界线与几何面重合时计数错误，liangjg
+| + 2014/01/15 Fix bug      修复错误：凹几何体全反射边界错误，liangjg
+| O 2013/10/19 [Version]    ——>Beta 2.2版
+| + 2013/10/19 Add feature  添加功能：燃耗数据库采取中子能量相关裂变产额，liangjg
+| + 2013/09/18 Add feature  添加功能：零功率（非裂变区）燃耗，sheding
+| + 2013/08/28 Change code  更改程序：并行与串行结果一致，sheding
+| O 2013/10/19 [Version]    ——>国核版本（删除相关功能），COSMC
+| + 2013/08/05 Add feature  添加功能：读取国核输入格式，qiuys
+| + 2013/08/05 Refactoring  重构第三阶段-变量命名规范
+| + 2013/07/20 Refactoring  重构第二阶段-类关系解耦，添加参数列表 
+| O 2013/07/13 [Version]    ——>Beta 2.0版，山东材料会发布（若干改动）——>核动力院版本 
+| + 2013/07/13 Refactoring  重构第一阶段-数据类封装与迁移
+| + 2013/06/27 Add feature  添加网格计数（MeshTally）功能，sheding
+| + 2013/06/26 Add feature  添加画图（Plot）功能，liangjg 
+| O 2013/06/22 [Version]    ——>创建Git版本库，第一版本
+-------------------------------------------------------------------------------------
+=====================================================================================
+RMC程序更新日志
+
+格式：
+
+| + 日期 类型 详细
+
+类型：
+    Fix bug     - 修复错误
+	Add feature - 添加功能
+	Add file    - 添加文件
+	Refactoring - 重构
+    Merge branch- 合并分支
+	Change code - 正常更改

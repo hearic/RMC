@@ -1,0 +1,66 @@
+//c PNL-4 18" Cad. Cov. Bare Sph, 27.49 g Pu/l, 4.2 wt% Pu-240;c PU-SOl-THERM-011 Case 18-6 and CSEWG: T-16c
+universe 0
+cell 1      -1        mat=1 
+cell 2      1 & -2     mat=2 
+cell 3      2 & -3     mat=3 
+cell 4      3          void=1
+ 
+surface     
+surf 1     so 22.6974 //$ Sphere Inner Radius
+surf 2     so 22.8244 //$ Sphere Outer Radius
+surf 3     so 22.8752 //$ Cad. Cov. Outer Radius
+
+//mode n
+//kcode 3000 1.0 40 800
+//sdef pos 0.0 0.0 0.0 rad d1
+//sc1 Spherical Source about origin
+//si1 22.6973
+//c Materials specified with atom densities     
+Criticality                               
+poweriter keff0=1 population = 1000 30 100   
+initsrc  point = 0 0 0                    
+
+material
+mat 1    1.003191e-01
+       94239.30c 6.6343e-05
+      94240.30c  2.8964e-06 //$ Solution 
+       7014.30c  2.7753e-03 
+       1001.30c  6.0264e-02 
+       8016.30c  3.7209e-02 
+      26054.30c 8.97036e-08 
+      26056.30c 1.39451e-06 
+      26057.30c 3.19284e-08 
+      26058.30c 4.25712e-09
+sab 1    lwtr.60t //$ S(Alpha,Beta)
+mat 2    8.6914e-02 
+       26054.30c 3.56277e-03 
+      26056.30c 5.53860e-02 
+      26057.30c 1.26811e-03 
+      26058.30c 1.69081e-04 
+      24050.30c 7.24659e-04 
+      24052.30c 1.39745e-02 
+      24053.30c 1.58441e-03 
+      24054.30c 3.94435e-04 
+      28058.30c 6.72487e-03 
+      28060.30c 2.57095e-03 
+      28061.30c 1.11310e-04 
+      28062.30c 3.53629e-04 
+      28064.30c 8.96386e-05
+mat 3   4.6340e-02 
+      48106.30c  5.7925e-4      48108.30c  4.1243e-4
+      48110.30c  5.7879e-3      48111.30c  5.9315e-3
+      48112.30c  1.1182e-2      48114.30c  1.3314e-2
+      48116.30c  3.4709e-3
+
+
+
+
+
+
+
+
+
+
+
+
+

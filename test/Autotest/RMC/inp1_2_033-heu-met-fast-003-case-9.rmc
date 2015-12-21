@@ -1,0 +1,49 @@
+/2.9" WC tamper Sphere from LA-1114: HEU-MET-FAST-003
+Universe 0
+cell 1   -1 mat = 1
+cell 2   1 & -2 mat = 2
+cell 3   2 void = 1
+
+Surface
+surf 1   so 6.2527 
+surf 2   so 13.6187 
+
+Material
+/Materials specified with atom densities 
+mat 1   0.048009
+  92234.30c  4.9210e-04
+  92235.30c  4.4917e-02
+  92238.30c  2.5993e-03
+mat 2   0.096114
+  6000.60c  4.8057e-02
+  74182.30c  1.2697e-02
+  74183.30c  6.8626e-03
+  74184.30c  1.4754e-02
+  74186.30c  1.3744e-02
+
+Criticality
+poweriter keff0 =  1.0  population = 100 30 100 
+initsrc  point = 0. 0. 0.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

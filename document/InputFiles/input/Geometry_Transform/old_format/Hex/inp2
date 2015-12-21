@@ -1,0 +1,47 @@
+// Hexagon Lattice  SHE DING : 2012-07-17 //
+  
+universe 0                                        
+1   0    -1  Fill = 1             // Assembly inside  
+2   0    1   imp = 0              // Assembly outside
+
+universe 1 origin = 4.76 -8.25  0 , rotate = 0 1 0 -1 0 0 0 0 1, lat = 2, pitch = 1.10 1.10, scope = 11  11, sita = 60, plane = 0 1,
+8 8 8 8 8 8 8 8 8 8 8
+8 8 8 8 8 8 8 8 8 8 8
+8 8 8 8 8 8 8 8 8 8 8
+8 8 8 8 8 8 8 8 8 8 8
+8 8 8 8 8 8 8 8 8 8 8
+8 8 8 8 8 8 8 8 8 8 8
+8 8 8 8 8 8 8 8 8 8 8
+8 8 8 8 8 8 8 8 8 8 8
+8 8 8 8 8 8 8 8 8 8 8
+8 8 8 8 8 8 8 8 8 8 8
+8 8 8 8 8 8 8 8 8 8 8
+
+universe 8               
+3    1    -2                        // inner       // Fuel rod 
+4    2    2                         // inner       // Air   
+
+surf    
+*1   cz   1.1
+2    cz   0.35 
+
+Mat   
+m1    -10.196                   
+      92235.30c   6.9100E-03    
+      92238.30c   2.2062E-01    
+      8016.30c    4.5510E-01    
+m2    9.9977E-02
+      1001.30c    6.6643E-02
+      8016.30c    3.3334E-02
+sabm2 lwtr.01t
+
+
+kcode  1.0   1000  20  50
+ksrc   point 0 0 0
+
+tally type = 1 
+      cell = 1 > 60 > 3
+             1 > 61 > 3
+             1 > 62 > 3
+             1 > 72 > 3
+             1 > 50 > 3

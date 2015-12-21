@@ -1,0 +1,36 @@
+///////  PWR pin: defined in single universe /////////////
+Universe  0   
+cell 1    -10   mat = 1                        // Fuel Pin
+cell 2    10 & -11    mat=2                    // Air   
+cell 3    11 & -12    mat =3                   // cladding
+cell 4    12 & 13 & -14 & 15 & -16   mat= 4    // water    
+cell 5    -13 : 14 : -15 : 16  void = 1        // outside
+
+Surface    
+surf 10   cz   0.4096 
+surf 11   cz   0.4178 
+surf 12   cz   0.4750 
+surf 13  px   -0.63   bc = 1
+surf 14  px   0.63    bc= 1
+surf 15  py   -0.63   bc =1
+surf 16  py   0.63    bc=1
+
+
+Material   
+mat 1    -10.198
+         92235.50m   6.9100E-03
+         92238.50m   2.2062E-01
+         8016.50m    4.5510E-01 
+mat 2    -0.001
+         8016.50m    3.76622E-5
+mat 3    -6.550
+         40000.50m  -98.2
+mat 4    -0.997
+         1001.50m    6.6643E-02
+         8016.50m    3.3334E-02
+MgAce ErgGrp = 30
+
+Criticality
+poweriter keff0 =  1.0  population = 2000  10  20
+initsrc  point = 0 0 0 
+ 

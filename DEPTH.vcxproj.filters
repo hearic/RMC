@@ -1,0 +1,189 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="源文件\TTA">
+      <UniqueIdentifier>{b017ae72-ccef-4733-a78f-5ead1621baf6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\ME">
+      <UniqueIdentifier>{fec3c0f7-0a66-4329-9883-3df99ea5282f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\Depth">
+      <UniqueIdentifier>{5464518d-8081-493e-b1da-274ff23a70a4}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="DEPTH_src\SparseMatrix.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="DEPTH_src\TTA_Class.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="DEPTH_src\ME_Class.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="DEPTH_src\Depth_Class.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="RMC_src\FileIO.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="DEPTH_src\ConvertLib.cpp">
+      <Filter>源文件\Depth</Filter>
+    </ClCompile>
+    <ClCompile Include="DEPTH_src\TransitNeu.cpp">
+      <Filter>源文件\Depth</Filter>
+    </ClCompile>
+    <ClCompile Include="DEPTH_src\TransitDec.cpp">
+      <Filter>源文件\Depth</Filter>
+    </ClCompile>
+    <ClCompile Include="DEPTH_src\ReadLib.cpp">
+      <Filter>源文件\Depth</Filter>
+    </ClCompile>
+    <ClCompile Include="DEPTH_src\ReadSubLib.cpp">
+      <Filter>源文件\Depth</Filter>
+    </ClCompile>
+    <ClCompile Include="DEPTH_src\DepthMain.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="DEPTH_src\CoupleDepth.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="DEPTH_src\SolverByCRAM.cpp">
+      <Filter>源文件\ME</Filter>
+    </ClCompile>
+    <ClCompile Include="DEPTH_src\SolverByQuad.cpp">
+      <Filter>源文件\ME</Filter>
+    </ClCompile>
+    <ClCompile Include="DEPTH_src\SolverByLaguerre.cpp">
+      <Filter>源文件\ME</Filter>
+    </ClCompile>
+    <ClCompile Include="DEPTH_src\CalcQuadCoeffs.cpp">
+      <Filter>源文件\ME</Filter>
+    </ClCompile>
+    <ClCompile Include="DEPTH_src\WriteTranMatirx.cpp">
+      <Filter>源文件\ME</Filter>
+    </ClCompile>
+    <ClCompile Include="DEPTH_src\MultiplyVecByLU.cpp">
+      <Filter>源文件\ME</Filter>
+    </ClCompile>
+    <ClCompile Include="DEPTH_src\DecmpMatrixByLU.cpp">
+      <Filter>源文件\ME</Filter>
+    </ClCompile>
+    <ClCompile Include="DEPTH_src\GaussElimi.cpp">
+      <Filter>源文件\ME</Filter>
+    </ClCompile>
+    <ClCompile Include="DEPTH_src\GaussElimiSymbol.cpp">
+      <Filter>源文件\ME</Filter>
+    </ClCompile>
+    <ClCompile Include="DEPTH_src\CalcMatrixNorm.cpp">
+      <Filter>源文件\ME</Filter>
+    </ClCompile>
+    <ClCompile Include="DEPTH_src\CalcChainBranch.cpp">
+      <Filter>源文件\TTA</Filter>
+    </ClCompile>
+    <ClCompile Include="DEPTH_src\CalcChainCutoff.cpp">
+      <Filter>源文件\TTA</Filter>
+    </ClCompile>
+    <ClCompile Include="DEPTH_src\CalOneChain.cpp">
+      <Filter>源文件\TTA</Filter>
+    </ClCompile>
+    <ClCompile Include="DEPTH_src\CalcChainNucDen.cpp">
+      <Filter>源文件\TTA</Filter>
+    </ClCompile>
+    <ClCompile Include="DEPTH_src\PopOneChain.cpp">
+      <Filter>源文件\TTA</Filter>
+    </ClCompile>
+    <ClCompile Include="DEPTH_src\PushOneChain.cpp">
+      <Filter>源文件\TTA</Filter>
+    </ClCompile>
+    <ClCompile Include="DEPTH_src\ResetTTA.cpp">
+      <Filter>源文件\TTA</Filter>
+    </ClCompile>
+    <ClCompile Include="DEPTH_src\SolveByTTA.cpp">
+      <Filter>源文件\TTA</Filter>
+    </ClCompile>
+    <ClCompile Include="DEPTH_src\CheckFileExist.cpp">
+      <Filter>源文件\Depth</Filter>
+    </ClCompile>
+    <ClCompile Include="DEPTH_src\WriteOutput.cpp">
+      <Filter>源文件\Depth</Filter>
+    </ClCompile>
+    <ClCompile Include="DEPTH_src\ErrorWarning.cpp">
+      <Filter>源文件\Depth</Filter>
+    </ClCompile>
+    <ClCompile Include="DEPTH_src\ReadInput.cpp">
+      <Filter>源文件\Depth</Filter>
+    </ClCompile>
+    <ClCompile Include="DEPTH_src\AdjustYield.cpp">
+      <Filter>源文件\Depth</Filter>
+    </ClCompile>
+    <ClCompile Include="DEPTH_src\SolveBurnEqs.cpp">
+      <Filter>源文件\Depth</Filter>
+    </ClCompile>
+    <ClCompile Include="DEPTH_src\CalMeanFluxPower.cpp">
+      <Filter>源文件\Depth</Filter>
+    </ClCompile>
+    <ClCompile Include="DEPTH_src\CalQuantities.cpp">
+      <Filter>源文件\Depth</Filter>
+    </ClCompile>
+    <ClCompile Include="DEPTH_src\CalStartFluxPower.cpp">
+      <Filter>源文件\Depth</Filter>
+    </ClCompile>
+    <ClCompile Include="DEPTH_src\Execute.cpp">
+      <Filter>源文件\Depth</Filter>
+    </ClCompile>
+    <ClCompile Include="DEPTH_src\Finish.cpp">
+      <Filter>源文件\Depth</Filter>
+    </ClCompile>
+    <ClCompile Include="DEPTH_src\GenTranMatrix.cpp">
+      <Filter>源文件\Depth</Filter>
+    </ClCompile>
+    <ClCompile Include="DEPTH_src\RunDepth.cpp">
+      <Filter>源文件\Depth</Filter>
+    </ClCompile>
+    <ClCompile Include="DEPTH_src\SetDefault.cpp">
+      <Filter>源文件\Depth</Filter>
+    </ClCompile>
+    <ClCompile Include="DEPTH_src\Initiate.cpp">
+      <Filter>源文件\Depth</Filter>
+    </ClCompile>
+    <ClCompile Include="DEPTH_src\GenNucList.cpp">
+      <Filter>源文件\Depth</Filter>
+    </ClCompile>
+    <ClCompile Include="DEPTH_src\ReadOrigenDec.cpp">
+      <Filter>源文件\Depth</Filter>
+    </ClCompile>
+    <ClCompile Include="DEPTH_src\ReadOrigenXs.cpp">
+      <Filter>源文件\Depth</Filter>
+    </ClCompile>
+    <ClCompile Include="DEPTH_src\ReadOrigenYld.cpp">
+      <Filter>源文件\Depth</Filter>
+    </ClCompile>
+    <ClCompile Include="DEPTH_src\GetNucIdIndex.cpp">
+      <Filter>源文件\Depth</Filter>
+    </ClCompile>
+    <ClCompile Include="DEPTH_src\GetLibData.cpp">
+      <Filter>源文件\Depth</Filter>
+    </ClCompile>
+    <ClCompile Include="DEPTH_src\CalcPowerFactor.cpp">
+      <Filter>源文件\Depth</Filter>
+    </ClCompile>
+    <ClCompile Include="DEPTH_src\InterpolateYield.cpp">
+      <Filter>源文件\Depth</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

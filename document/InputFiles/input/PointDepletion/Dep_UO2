@@ -1,0 +1,17 @@
+/// Input File  ////
+depletion
+// CONVERTLIB 1 decay.data xs.data yield.data DepthMainLIB   // 数据库转换选项： 将ORIGEN数据库转换为DEPTH数据库
+// CONVERTLIB 2 tape9.inp DepthMainLIB   // 数据库转换选项： 将ORIGEN数据库转换为DEPTH数据库
+Flux 3.0E+14    0.1y * 10
+// Decay        0.3y * 10
+Density   80160  2       
+          922350 0.03   
+          922380 0.97    // 初始成分  正:克原子（摩尔）  负：质量密度
+SOLVER 2              // 燃耗方程求解方法     1: TTA   2: CRAM  3: Quadrature  4：Laguerre
+TTA 1.0E-15
+QRAM 32
+print  0                 // 输出选项             0：Print Last step  1：Print All steps
+Radioactivity   0        // 放射性活度（Curi）   0：None    1：Absolute   2：Fractional
+AbsorpRate      0        // 中子吸收率（次/s）   0：None    1：Absolute   2：Fractional
+FissionRate     0        // 裂变率（Fissions/s） 0：None    1：Absolute   2：Fractional
+DecayHeat       0        // 衰变热（Watt）       0：None    1：Absolute,  2：Fractional

@@ -1,0 +1,55 @@
+///////////// MFR ASSEMBLY. FAN Xiao 2012-09-17 /////////////
+Universe 0
+cell 1 -1&-2&-3&4&-5&-6&7&-8 mat=0 fill=1    //Assembly inside
+cell 2 16:-17:18 mat=0 void=1                //Assembly outside
+cell 3 -16&17&-18&(1:2:3:-4:5:6:-7:8) mat=5  //reflector
+
+Universe 1 move=-15 -9.05 0 lat=2 pitch=2 2.06787 scope=11 11 sita=63.435 fill=
+  2 2 2 2 2 2 2 2 2 2 2
+  2 2 2 2 2 3 3 3 3 3 2
+  2 2 2 2 3 3 3 3 3 3 2
+  2 2 2 3 3 3 3 3 3 3 2
+  2 2 3 3 3 3 3 3 3 3 2
+  2 3 3 3 3 3 3 3 3 3 2
+  2 3 3 3 3 3 3 3 3 2 2
+  2 3 3 3 3 3 3 3 2 2 2
+  2 3 3 3 3 3 3 2 2 2 2
+  2 3 3 3 3 3 2 2 2 2 2
+  2 2 2 2 2 2 2 2 2 2 2
+
+Universe 2
+cell 21 -15 mat=1
+cell 22 15 mat=1
+
+Universe 3
+cell 31 -15 mat=2
+cell 32 15 mat=3
+
+Surface
+surf  1 py 8.4
+surf  2 p  1.732 1 0 16.3
+surf  3 p  1.732 -1 0 16.3
+surf  4 py -8.4
+surf  5 p  -1.732 -1 0 16.3
+surf  6 p  -1.732 1 0 16.3
+surf  7 pz -30
+surf  8 pz 30
+surf 15 cz 0.975
+surf 16 cz 30
+surf 17 pz -35
+surf 18 pz 35
+
+Material
+mat 1 -0.8139   // Na
+      11023.30c 1.0
+mat 2 -10.41    // UO2
+      92235.30c -56.5   92238.30c -31.1    8016.30c -12.3  13027.30c -0.02
+      20000.60c -0.02   12000.60c -0.02   26000.55c -0.02  14000.60c -0.02
+mat 3 -0.8355   // wiry
+      11023.30c  2.132  28000.50c 3.223E-3  24000.50c 4.759E-3 26000.55c 1.634E-2
+mat 5 0.1236    //Be9
+      4009.30c 1
+
+Criticality
+PowerIter keff0=1.0 population = 2000 50 300
+InitSrc point=0 0 0

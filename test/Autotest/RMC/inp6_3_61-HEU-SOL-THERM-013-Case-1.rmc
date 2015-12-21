@@ -1,0 +1,45 @@
+//ORNL-1 Uranyl nitrate in H2O Sphere; HEU-SOL-THERM-013 case #1
+Universe 0                                              
+cell 1   -1               mat=1                      
+cell 2    1& -2           mat=2                      
+cell 3    2               mat=0    void=1                  
+
+Surface 
+surf 1 so 34.5948                                                  
+surf 2 so 34.9148                                                  
+                                                        
+//kcode 10000 1. 100 600                                        
+//sdef pos 0.0 0.0 0.0 rad d1                                   
+//sc1 Spherical Source                                          
+//si1 34.5                                                      
+                    
+Material                    
+mat 1 0.09992137412
+      92234.30c 5.3850e-7 92235.30c 4.8042e-5                    
+      92236.30c 1.3862e-7 92238.30c 2.8050e-6                       
+      7014.30c 1.8685e-4                                            
+      8016.30c 3.3629e-2 8017.30c 1.3457e-5                         
+      1001.30c 6.6041e-2                                            
+mat 2 0.09992137412
+      13027.30c 5.9699e-2                                        
+      14028.30c 5.0913e-4 14029.30c 2.5779e-5                       
+      14030.30c 1.7113e-5                                           
+      25055.30c 1.4853e-5                                           
+      29063.30c 3.5529e-5 29065.30c 1.5835e-5                       
+sab 1 lwtr.60t   
+                                               
+Criticality                                                                                                    
+poweriter keff0 =  1.0  population = 100 30 100      
+initsrc  sph = 0.0 0.0 0.0 34.5   
+                                                       
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,33 @@
+Criticality Test. Start at 2013-07-09 Tuesday 20:25:50
+Total Number of Samples: 27
+Neutron Population: population = 1000 30 100
+
+inp1_1_033-heu-met-fast-003-case-9.rmc.out         keff=    1.012570  var=    0.002446  cmt(min)=    0.051900
+inp1_2_033-heu-met-fast-003-case-9.rmc.out         keff=    1.012570  var=    0.002446  cmt(min)=    0.055000
+inp1_3_033-heu-met-fast-003-case-9.rmc.out         keff=    1.012570  var=    0.002446  cmt(min)=    0.065400
+inp2_1_053-heu-sol-therm-003-case-4.rmc.out        keff=    0.994314  var=    0.002381  cmt(min)=    0.193600
+inp2_2_053-heu-sol-therm-003-case-4.rmc.out        keff=    0.994314  var=    0.002381  cmt(min)=    0.187800
+inp2_3_053-heu-sol-therm-003-case-4.rmc.out        keff=    0.994314  var=    0.002381  cmt(min)=    0.198300
+inp3_1_060-heu-met-inter-006-case-4.rmc.out        keff=    0.961082  var=    0.003105  cmt(min)=    0.175800
+inp3_2_060-heu-met-inter-006-case-4.rmc.out        keff=    0.961082  var=    0.003105  cmt(min)=    0.176600
+inp3_3_060-heu-met-inter-006-case-4.rmc.out        keff=    0.961082  var=    0.003105  cmt(min)=    0.181700
+inp4_1_114-pu-sol-therm-011-case-18-6.rmc.out      keff=    1.004541  var=    0.002939  cmt(min)=    0.120300
+inp4_2_114-pu-sol-therm-011-case-18-6.rmc.out      keff=    1.004541  var=    0.002939  cmt(min)=    0.119400
+inp4_3_114-pu-sol-therm-011-case-18-6.rmc.out      keff=    1.004541  var=    0.002939  cmt(min)=    0.126300
+inp5_1_18-u233-comp-therm-001-case-3.rmc.out       keff=    1.001223  var=    0.003748  cmt(min)=    0.495300
+inp5_2_18-u233-comp-therm-001-case-3.rmc.out       keff=    1.001223  var=    0.003748  cmt(min)=    0.479600
+inp5_3_18-u233-comp-therm-001-case-3.rmc.out       keff=    1.001223  var=    0.003748  cmt(min)=    0.486200
+inp6_1_61-HEU-SOL-THERM-013-Case-1.rmc.out         keff=    0.998853  var=    0.001906  cmt(min)=    0.236600
+inp6_2_61-HEU-SOL-THERM-013-Case-1.rmc.out         keff=    0.998853  var=    0.001906  cmt(min)=    0.237100
+inp6_3_61-HEU-SOL-THERM-013-Case-1.rmc.out         keff=    0.998853  var=    0.001906  cmt(min)=    0.245200
+inp7_1_Tally_Hoogenboom_core.rmc.out               keff=    1.005861  var=    0.002373  cmt(min)=    0.616200
+inp7_2_Tally_Hoogenboom_core.rmc.out               keff=    1.005861  var=    0.002373  cmt(min)=    0.597400
+inp7_3_Tally_Hoogenboom_core.rmc.out               keff=    1.005861  var=    0.002373  cmt(min)=    0.623400
+inp8_1_Keff_MFR_core.rmc.out                       keff=    1.194516  var=    0.002656  cmt(min)=    0.160200
+inp8_2_Keff_MFR_core.rmc.out                       keff=    1.194516  var=    0.002656  cmt(min)=    0.166000
+inp8_3_Keff_MFR_core.rmc.out                       keff=    1.194516  var=    0.002656  cmt(min)=    0.156600
+inp9_1_Keff_PWR_core.rmc.out                       keff=    1.398051  var=    0.001840  cmt(min)=    0.261100
+inp9_2_Keff_PWR_core.rmc.out                       keff=    1.398051  var=    0.001840  cmt(min)=    0.239100
+inp9_3_Keff_PWR_core.rmc.out                       keff=    1.398051  var=    0.001840  cmt(min)=    0.244200
+
+Criticality Test. Finish at 2013-07-09 Tuesday 20:32:44

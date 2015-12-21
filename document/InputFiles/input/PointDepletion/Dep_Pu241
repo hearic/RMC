@@ -1,0 +1,11 @@
+/// Input File  ////
+depletion
+// CONVERTLIB 2 tape9.inp DepthMainLIB
+DECAY	   1.0E+06y
+Density  942410 1.0
+SOLVER 1                 // 燃耗方程求解方法     1: TTA   2: CRAM  3: Quadrature  4：Laguerre
+print  1                 // 输出选项             0：Print Last step  1：Print All steps
+Radioactivity   1        // 放射性活度（Curi）   0：None    1：Absolute   2：Fractional
+AbsorpRate      0        // 中子吸收率（次/s）   0：None    1：Absolute   2：Fractional
+FissionRate     0        // 裂变率（Fissions/s） 0：None    1：Absolute   2：Fractional
+DecayHeat       1        // 衰变热（Watt）       0：None    1：Absolute,  2：Fractional

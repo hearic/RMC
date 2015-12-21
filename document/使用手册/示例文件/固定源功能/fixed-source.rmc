@@ -1,0 +1,147 @@
+// BAPL SB Criticals Core 2 1/2 Full U-233 Core U233-COMP-THERM-001 Case 3
+// FIXED-SOURCE PROBLEM
+Universe 0
+cell  7     8 & -11 & 13 & -16 & 19 & -20     mat=4   // $ Control Blade D
+cell  8     8 & -11 & 13 & -16 & 21 & -22     mat=4   // $ Control Blade C
+cell  9     8 & -11 & 13 & -16 & 25 & -26     mat=4   // $ Control Blade B
+cell  10    8 & -11 & 13 & -16 & 27 & -28     mat=4   // $ Control Blade A
+//
+cell  12   12 & -17 & 18 & -29 & 6 & -10 & (-8:11:-13:16:-19:20) & (-8:11:-13:16:-21:22) & (-8:11:-13:16:-25:26) & (-8:11:-13:16:-27:28)   mat=0 fill=2 // $ Core
+cell  13   -1 & 10 & -11 & (-8:11:-13:16:-19:20) & (-8:11:-13:16:-21:22) & (-8:11:-13:16:-25:26) & (-8:11:-13:16:-27:28)   mat=3  // $ Top Reflector
+cell  14   -1 & 5 & -6                          mat=3  // $ Bottom Reflector
+cell  15   -1 & 6 & -10 & -12                   mat=3  // $ Left Reflector
+cell  16   -1 & 6 & -10 & 17                    mat=3  // $ Right Reflector
+cell  17   -1 & 6 & -10 & 12 & -17 & -18        mat=3  // $ Front Reflector
+cell  18   -1 & 6 & -10 & 12 & -17 & 29         mat=3  // $ Back Reflector
+cell  19    1:-5:11                             void=1
+//
+
+Universe 1  move = 0  0  25.8191                         // 0.45974 0.45974 0<div></div>
+cell  1     -2 & 7 & -9               mat=5   // u=1       $ Fuel Pin
+cell  2     -2 & -7                   mat=1   // u=1       $ ENDF/B-VII.0 Bottom End Plug
+cell  3     -2 & 9                    mat=1   // u=1       $ ENDF/B-VII.0 Top End Plug
+cell  4     2 & -3                    mat=0   // u=1       $ Void
+cell  5     3 & -4                    mat=1   // u=1       $ ENDF/B-VII.0 Cladding
+cell  6     4                         mat=3   // u=1       $ Water
+
+Universe 2  move=-7.35584 -8.27532 -25.8191  lat=1  pitch=0.91948 0.91948 1 
+          scope=16 18 1  fill=
+               1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+               1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+               1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+               1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+               1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+               1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+               1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+               1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+               1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+               1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+               1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+               1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+               1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+               1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+               1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+               1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+               1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+               1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+
+Surface
+surf  1   cz    42.18                     // Reflector Outer Radius
+surf  2   c/z   0.45974 0.45974 0.26797   // Fuel Outer Radius
+surf  3   c/z   0.45974 0.45974 0.27940   // Clad Inner Radius
+surf  4   c/z   0.45974 0.45974 0.32385   // Clad Outer Radius
+surf  5   pz   -56.2991     //$ Bottom of Relector
+surf  6   pz   -25.8191     //$ Bottom of End Plug
+surf  7   pz   -19.05       //$ Bottom of Fuel
+surf  8   pz   16.05        //$ Bottom of Control Blades
+surf  9   pz   19.05        //$ Top of Fuel
+surf  10  pz   25.8191      //$ Top of End Plug
+surf  11  pz   56.2991      //$ Top of Reflector
+surf  12  px   -7.35584     //$ Left Edge of Core
+surf  13  px   -3.81        //$ Left Edge of Control Blades
+surf  14  px  0.0           //$ Left Edge of Cell
+surf  15  px  0.91948       //$ Right Edge of Cell
+surf  16  px  3.81          //$ Right Edge of Control Blades
+surf  17  px  7.35584       //$ Right Edge of Core
+surf  18  py  -8.27532   //$ Front Edge of Core
+surf  19  py  -5.60578   //$ Front Edge of Control Blade D
+surf  20  py  -5.42798   //$ Back Edge of Control Blade D
+surf  21  py  -1.92786   //$ Front Edge of Control Blade C
+surf  22  py  -1.75006   //$ Back Edge of Control Blade C
+surf  23  py  0.0        //$ Front Edge of Cell
+surf  24  py  0.91948    //$ Back Edge of Cell
+surf  25  py  1.75006    //$ Front Edge of Control Blade B
+surf  26  py  1.92786    //$ Back Edge of Control Blade B
+surf  27  py  5.42798    //$ Front Edge of Control Blade A
+surf  28  py  5.60578    //$ Back Edge of Control Blade A
+surf  29  py  8.27532    //$ Back Edge of Core
+
+FixedSource 
+neutron  population = 1000000 point = 0.45974 0.45974 0  erg = 0.02
+
+Material
+mat 1  0.043036
+       40090.30c 2.1885e-2
+       40091.30c 4.7727e-3
+       40092.30c 7.2951e-3
+       40094.30c 7.3929e-3
+       40096.30c 1.1910e-3
+       50112.30c 4.8420e-6
+       50114.30c 3.2447e-6 //$ ENDF/B-VII.0
+       50115.30c 1.6972e-6
+       50116.30c 7.2581e-5 //$ ENDF/B-VII.0
+       50117.30c 3.8337e-5
+       50118.30c 1.2090e-4 //$ ENDF/B-VII.0
+       50119.30c 4.2880e-5
+       50120.30c 1.6268e-4 // $ ENDF/B-VII.0
+       50122.30c 2.3112e-5
+       50124.30c 2.8902e-5
+//  mat 2  1001.60c 7.8854e-2 
+//     6000.60c 3.9427e-2
+// sab 2 poly.60t
+mat 3  0.100103
+       1001.30c 6.6735e-2
+       8016.30c 3.3355e-2
+       8017.30c 1.3347e-5
+sab 3 lwtr.60t
+mat 4  0.088821
+        5010.30c 3.7488e-3
+       24050.30c 7.5725e-4
+       24052.30c 1.4603e-2
+       24053.30c 1.6557e-3
+       24054.30c 4.1217e-4
+       25055.30c 8.6816e-4
+       26054.30c 3.4963e-3
+       26056.30c 5.4352e-2
+       26057.30c 1.2444e-3
+       26058.30c 1.6593e-4
+       28058.30c 5.1319e-3
+       28060.30c 1.9620e-3
+       28061.30c 8.4943e-5
+       28062.30c 2.6986e-4
+       28064.30c 6.8406e-5
+// c UO2-ZrO2 Seed Fuel (97.19 w/o U-233) N-tot=0.080898
+mat 5  0.070898
+      8016.30c 5.3910e-2
+      8017.30c 2.1573e-5
+     40090.30c 1.1765e-2
+     40091.30c 2.5657e-3
+     40092.30c 3.9217e-3
+     40094.30c 3.9743e-3
+     40096.30c 6.4028e-4
+     92233.30c 3.9891e-3
+     92234.30c 6.3690e-5
+     92238.30c 4.5759e-5
+// c end of input
+
+Tally
+CellTally 1 type = 1 cell = 12>153>1  energy = 1.00e-11 1.997e-11 3.1048e-11 5.4709e-11 9.6400e-11
+       1.6986e-10 2.9931e-10 5.2739e-10 9.2929e-10 1.6375e-9 
+       2.8853e-9 5.0841e-9 8.9584e-9 1.5785e-8 2.7814e-8 
+       4.9010e-8 8.6359e-8 1.5217e-7 2.6813e-7 4.7246e-7  
+       8.3250e-7 1.4669e-6 2.5848e-6 4.5545e-6 8.0253e-6 
+       2.4917e-5 4.3905e-5 7.7363e-5 1.3632e-4 2.4020e-4 
+       4.2325e-4 7.4578e-4 1.3141e-3 2.3155e-3 4.0801e-3 
+       7.1893e-3 1.2668e-2 2.2322e-2 3.9332e-2 6.9305e-2 
+       1.2212e-1 2.1518e-1 3.7916e-1 6.6810e-1 1.1772e+0 
+       2.0743e+0 3.6551e+0 6.4405e+0 11.348e+0 19.997e+0

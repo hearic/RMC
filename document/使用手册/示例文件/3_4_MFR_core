@@ -1,0 +1,62 @@
+//// MFR CORE.FAN Xiao 2012-09-17 ////
+Universe 0
+cell 1 -21&7&-8 mat=0 fill=1
+cell 2 21:-7:8 mat=0 void=1
+
+Universe 1 move=-50.4 -27.942 0 lat=2 pitch=16.8 16.302 scope=5 5 sita=60 fill=
+  2 2 2 2 2
+  2 2 3 3 2
+  2 3 3 3 2
+  2 3 3 2 2
+  2 2 2 2 2
+
+Universe 2
+cell 21 -15 mat=1
+cell 22 15 mat=1
+
+Universe 3 move=9.05 -15 0 rotate=0 1 0 -1 0 0 0 0 1
+      lat=2  pitch=2 2.06787 scope=11 11 sita=63.435  fill=
+      4 4 4 4 4 4 4 4 4 4 4
+      4 4 4 4 4 5 5 5 5 5 4
+      4 4 4 4 5 5 5 5 5 5 4
+      4 4 4 5 5 5 5 5 5 5 4
+      4 4 5 5 5 5 5 5 5 5 4
+      4 5 5 5 5 5 5 5 5 5 4
+      4 5 5 5 5 5 5 5 5 4 4
+      4 5 5 5 5 5 5 5 4 4 4
+      4 5 5 5 5 5 5 4 4 4 4
+      4 5 5 5 5 5 4 4 4 4 4
+      4 4 4 4 4 4 4 4 4 4 4
+
+Universe 4
+cell 41 -15 mat=1
+cell 42 15 mat=1
+
+Universe 5
+cell 51 -15 mat=2
+cell 52 15 mat=3
+
+Surface
+surf 5  p   1  1.6632 0 46.474
+surf 2  p   1 -1.6632 0 46.474
+surf 3  p  -1 -1.6632 0 46.474
+surf 6  p  -1  1.6632 0 46.474
+surf 1  px  27.942
+surf 4  px -27.942
+surf 7  pz -30
+surf 8  pz  30
+surf 15 cz  0.975
+surf 21 cz  25
+
+Material
+mat 1 -0.8139   // Na
+      11023.30c 1.0
+mat 2 -10.41    // UO2
+      92235.30c -56.5   92238.30c -31.1    8016.30c -12.3  13027.30c -0.02
+      20000.60c -0.02   12000.60c -0.02   26000.55c -0.02  14000.60c -0.02
+mat 3 -0.8355   // wiry
+      11023.30c  2.132  28000.50c 3.223E-3  24000.50c 4.759E-3 26000.55c 1.634E-2
+
+Criticality
+PowerIter keff0=1.0 population = 50000 200 1000
+InitSrc point=0 0 0

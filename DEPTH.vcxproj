@@ -1,0 +1,226 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{5E9E1E8B-D01D-4FA5-928B-705394C4006E}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>DEPTH</RootNamespace>
+    <SccProjectName>
+    </SccProjectName>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <ExecutablePath>$(ExecutablePath)</ExecutablePath>
+    <IncludePath>$(MSBuildProjectDirectory)\external_libraries\mpich2\include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(MSBuildProjectDirectory)\external_libraries\mpich2\lib;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <ExecutablePath>D:\Program Files (x86)\MPICH2\bin;$(ExecutablePath)</ExecutablePath>
+    <IncludePath>D:\Program Files (x86)\MPICH2\include;$(IncludePath)</IncludePath>
+    <LibraryPath>D:\Program Files (x86)\MPICH2\lib;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <ExecutablePath>$(ExecutablePath)</ExecutablePath>
+    <IncludePath>$(MSBuildProjectDirectory)\external_libraries\mpich2\include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(MSBuildProjectDirectory)\external_libraries\mpich2\lib;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <ExecutablePath>D:\Program Files (x86)\MPICH2\bin;$(ExecutablePath)</ExecutablePath>
+    <IncludePath>D:\Program Files (x86)\MPICH2\include;$(IncludePath)</IncludePath>
+    <LibraryPath>D:\Program Files (x86)\MPICH2\lib;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <FloatingPointModel>Precise</FloatingPointModel>
+      <WholeProgramOptimization>false</WholeProgramOptimization>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <FloatingPointModel>Precise</FloatingPointModel>
+      <WholeProgramOptimization>false</WholeProgramOptimization>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="DEPTH_src\Depth_Class.h" />
+    <ClInclude Include="DEPTH_src\ME_Class.h" />
+    <ClInclude Include="DEPTH_src\SparseMatrix.h" />
+    <ClInclude Include="DEPTH_src\TTA_Class.h" />
+    <ClInclude Include="RMC_src\FileIO.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="DEPTH_src\AdjustYield.cpp" />
+    <ClCompile Include="DEPTH_src\CalcPowerFactor.cpp" />
+    <ClCompile Include="DEPTH_src\CalMeanFluxPower.cpp" />
+    <ClCompile Include="DEPTH_src\CalQuantities.cpp" />
+    <ClCompile Include="DEPTH_src\CheckFileExist.cpp" />
+    <ClCompile Include="DEPTH_src\CoupleDepth.cpp" />
+    <ClCompile Include="DEPTH_src\ConvertLib.cpp" />
+    <ClCompile Include="DEPTH_src\CalcMatrixNorm.cpp" />
+    <ClCompile Include="DEPTH_src\GenTranMatrix.cpp" />
+    <ClCompile Include="DEPTH_src\GetLibData.cpp" />
+    <ClCompile Include="DEPTH_src\GetNucIdIndex.cpp" />
+    <ClCompile Include="DEPTH_src\InterpolateYield.cpp" />
+    <ClCompile Include="DEPTH_src\MultiplyVecByLU.cpp" />
+    <ClCompile Include="DEPTH_src\DecmpMatrixByLU.cpp" />
+    <ClCompile Include="DEPTH_src\ErrorWarning.cpp" />
+    <ClCompile Include="DEPTH_src\Execute.cpp" />
+    <ClCompile Include="DEPTH_src\Finish.cpp" />
+    <ClCompile Include="DEPTH_src\CalStartFluxPower.cpp" />
+    <ClCompile Include="DEPTH_src\GaussElimi.cpp" />
+    <ClCompile Include="DEPTH_src\GaussElimiSymbol.cpp" />
+    <ClCompile Include="DEPTH_src\Initiate.cpp" />
+    <ClCompile Include="DEPTH_src\ReadOrigenDec.cpp" />
+    <ClCompile Include="DEPTH_src\ReadOrigenXs.cpp" />
+    <ClCompile Include="DEPTH_src\ReadOrigenYld.cpp" />
+    <ClCompile Include="DEPTH_src\SetDefault.cpp" />
+    <ClCompile Include="DEPTH_src\GenNucList.cpp" />
+    <ClCompile Include="DEPTH_src\ReadInput.cpp" />
+    <ClCompile Include="DEPTH_src\SolverByLaguerre.cpp" />
+    <ClCompile Include="DEPTH_src\DepthMain.cpp" />
+    <ClCompile Include="DEPTH_src\WriteTranMatirx.cpp" />
+    <ClCompile Include="DEPTH_src\SolveBurnEqs.cpp" />
+    <ClCompile Include="DEPTH_src\WriteOutput.cpp" />
+    <ClCompile Include="DEPTH_src\CalcQuadCoeffs.cpp" />
+    <ClCompile Include="DEPTH_src\SolverByQuad.cpp" />
+    <ClCompile Include="DEPTH_src\ReadLib.cpp" />
+    <ClCompile Include="DEPTH_src\SolverByCRAM.cpp" />
+    <ClCompile Include="DEPTH_src\ReadSubLib.cpp" />
+    <ClCompile Include="DEPTH_src\RunDepth.cpp" />
+    <ClCompile Include="DEPTH_src\TransitDec.cpp" />
+    <ClCompile Include="DEPTH_src\TransitNeu.cpp" />
+    <ClCompile Include="DEPTH_src\CalcChainBranch.cpp" />
+    <ClCompile Include="DEPTH_src\CalcChainCutoff.cpp" />
+    <ClCompile Include="DEPTH_src\ResetTTA.cpp" />
+    <ClCompile Include="DEPTH_src\SolveByTTA.cpp" />
+    <ClCompile Include="DEPTH_src\CalOneChain.cpp" />
+    <ClCompile Include="DEPTH_src\CalcChainNucDen.cpp" />
+    <ClCompile Include="DEPTH_src\PopOneChain.cpp" />
+    <ClCompile Include="DEPTH_src\PushOneChain.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

@@ -1,0 +1,15 @@
+RMC画图模块的三维画图功能，可以利用vtk库生产vti格式三维图像。然而vtk库很大（头文件和静态库.lib），而且Release和Debug两种模式需要不同的库，为了避免版本库过于臃肿，只保留Release模式的库，即版本库不能在Debug下编译具有vtk格式的程序。同时为了避免影响开发，在plot中设置预定义宏，屏蔽vti图像格式，直接生成文本形式的voxel格式。在平时开发中不需要打开这个功能，进而不需要引用vtk库，即可以在debug下编译/运行，但不能打开vtk功能。
+
+程序发布时，需要开启vti画图功能，则：
+1. 切换到release模式，：
+2. 打开plot.h中的 #define  _VTK_FILE
+即可。
+
+特别，如需在debug模式下编译vtk功能模式，则需要：
+1. 生成vtk在debug下的静态库（选择MTd模式）；或者利用已经编译好的库，存放在ftp(E/RMC/ExtLib/vtk/Debug)
+2. 复制库至\external_libraries\libvtk\lib\Debug
+3. 更改Debug配置 VC++目录 - 库目录 - $(MSBuildProjectDirectory)\external_libraries\libvtk\lib 改为 \lib\Debug
+4. 链接器 - 忽略特定默认库 - 添加LIBCMT.lib
+5. 打开plot.h中的 #define  _VTK_FILE
+即可。
+

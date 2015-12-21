@@ -1,0 +1,82 @@
+临界类和固定源类函数对比
+
+     临界类                        固定源类                重构效果                                               重构结果
+1.   CheckCriticality        <==>  CheckFixedSource        unchange                                               unchange
+2.   InitiateAll             <==>  InitiateAll             unchange                                               unchange
+3.   InitiateTrspt           <==>  InitiateTrspt           unchange                                               unchange
+4.   InitiateFisSource       <==>  InitiateExternalSource  unchange                                               unchange
+5.   TrackOneNeu             <==>  TrackOneNeu             删除，让函数体暴露出来                                 删除，让函数体暴露出来
+6.   TrackHistory            <==>  TrackHistory            *NeutronTransport.TrackHistory                         临界类和固定源类中保留
+7.   ???                     <==>  SampleFixSource         unchange                                               unchange
+8.   SampleFisSource         <==>  SampleFisSource         unchange                                               unchange
+9.   OutputSrcInfo           <==>  OutputSrcInfo           *NeutronTransport.OutputSrcInfo                        NeutronTransport.OutputSrcInfo
+10.  GeometryTracking        <==>  GeometryTracking        *NeutronTransport.GeometryTracking                     NeutronTransport类中重载
+11.  SampleFreeFlyDist       <==>  SampleFreeFlyDist       *NeutronTransport.SampleFreeFlyDist                    NeutronTransport.SampleFreeFlyDist
+12.  SampleColliNuc          <==>  SampleColliNuc          *NeutronTransport.SampleColliNuc                       NeutronTransport.SampleColliNuc   
+13.  CalcColliNucCs          <==>  CalcColliNucCs          *NeutronTransport.CalcColliNucCs                       NeutronTransport.CalcColliNucCs   
+14.  TreatImpliCapt          <==>  TreatImpliCapt          *NeutronTransport.TreatImpliCapt                       NeutronTransport类中重载
+15.  SampleColliType         <==>  SampleColliType         *NeutronTransport.SampleColliType                      NeutronTransport类中重载
+16.  GetExitState            <==>  GetExitState            *NeutronTransport.GetExitState                         NeutronTransport类中重载
+17.  GetCeExitState          <==>  GetCeExitState          *NeutronTransport.GetCeExitState                       NeutronTransport.GetCeExitState   
+18.  RotateDirection         <==>  RotateDirection         *NeutronTransport.RotateDirection                      NeutronTransport.RotateDirection  
+19.  RotationFreeGas         <==>  rotation_freegas        *NeutronTransport.rotation_freegas                     NeutronTransport.rotation_freegas 
+20.  TreatFission            <==>  TreatFission            *NeutronTransport.TreatFission                         NeutronTransport.TreatFission        
+21.  BankFisSourceMg         <==>  BankFisSourceMg         *NeutronTransport.BankFisSourceMg                      NeutronTransport.BankFisSourceMg     
+22.  BankFissions            <==>  BankFissions            *NeutronTransport.GetFissionNeuState                   临界类和固定源类中保留  
+23.  BankFisSource           <==>  ???                     *fissionBank变量作为函数参数                           临界类和固定源类中保留          
+24.  ProcessBank             <==>  ProcessBank             从固定源类中删除                                       从固定源类中删除
+25.  TreatFreeGasModel       <==>  TreatFreeGasModel       *NeutronTransport.TreatFreeGasModel                    NeutronTransport.TreatFreeGasModel
+26.  ResetTrspt              <==>  ???                     重命名为ResetCriticality                               重命名为ResetCriticality
+27.  EstimateKeffTrk         <==>  ???                     转移到tally类中, keff和std等变量放入tally类, 第二步    转移到tally类中, keff和std等变量放入tally类, 第二步
+28.  EstimateKeffCol         <==>  ???                     转移到tally类中, 第二步                                转移到tally类中, 第二步
+29.  EstimateKeffAbs         <==>  ???                     转移到tally类中, 第二步                                转移到tally类中, 第二步
+30.  ProcessCycleEnd         <==>  ???                     unchange                                               unchange
+31.  ProcessKeff             <==>  ???                     unchange                                               unchange
+32.  CombineKeff             <==>  ???                     unchange                                               unchange
+33.  OutputKeff              <==>  ???                     unchange                                               unchange
+                                                           
+类变量                                                     
+                                                           
+     临界类                        固定源类                
+1.   p_nNeuNumPerCyc         <==>  p_nNeuNum               unchange                                               unchange                                         
+2.   p_nTotCycNum            <==>  ???                     unchange                                               unchange
+3.   p_nInactCycNum          <==>  ???                     unchange                                               unchange
+4.   p_nActCycNum            <==>  ???                     unchange                                               unchange
+5.   p_bUseBatch             <==>  ???                     unchange                                               unchange
+6.   p_nBatchNum             <==>  ???                     unchange                                               unchange
+7.   p_nBatchLen             <==>  ???                     unchange                                               unchange
+8.   p_dBatchKeff            <==>  ???                     unchange                                               unchange
+9.   p_nKsrcType             <==>  p_nFixedSrcType         unchange                                               unchange
+10.  p_vKsrcPara             <==>  p_vFixedSrcPara         unchange                                               unchange
+11.  p_nCycleNeuNum          <==>  ???                     unchange                                               unchange
+12.  p_nCurrActiveCYCLE      <==>  ???                     unchange                                               unchange
+13.  p_nCurrentCYCLE         <==>  ???                     unchange                                               unchange
+14.  p_nCurrentPARTICLE      <==>  p_nCurrentPARTICLE      *NeutronTransport.p_nCurrentPARTICLE                   NeutronTransport.p_nCurrentPARTICLE
+15.  p_dKeffFinal            <==>  ???                     unchange                                               unchange
+16.  p_dKeffWgtSum           <==>  ???                     unchange                                               unchange
+17.  p_dKeffCyc              <==>  ???                     unchange                                               unchange
+18.  p_dKeffSum              <==>  ???                     unchange                                               unchange
+19.  p_dKeffCrosSum          <==>  ???                     unchange                                               unchange
+20.  p_dKeffIndAve           <==>  ???                     unchange                                               unchange
+21.  p_dKeffIndStd           <==>  ???                     unchange                                               unchange
+22.  p_dKeffCovwAve          <==>  ???                     unchange                                               unchange
+23.  p_dKeffCovwStd          <==>  ???                     unchange                                               unchange
+24.  p_dTotStartWgt          <==>  p_dTotStartWgt          unchange                                               unchange
+25.  p_dStartWgt             <==>  p_dStartWgt             *NeutronTransport.p_dStartWgt                          NeutronTransport.p_dStartWgt 
+26.  p_dWgtCutOff            <==>  p_dWgtCutOff            *NeutronTransport.p_dWgtCutOff                         NeutronTransport.p_dWgtCutOff
+27.  p_dEg0CutOff            <==>  p_dEg0CutOff            *NeutronTransport.p_dEg0CutOff                         NeutronTransport.p_dEg0CutOff
+28.  p_nMissParticleCount    <==>  p_nMissParticleCount    *NeutronTransport.p_nMissParticleCount                 NeutronTransport.p_nMissParticleCount 
+29.  p_llTotCollisionCount   <==>  p_llTotCollisionCount   *NeutronTransport.p_llTotCollisionCount                临界类和固定源类中保留
+30.  p_nCollisionCount       <==>  p_nCollisionCount       *NeutronTransport.p_nCollisionCount                    临界类和固定源类中保留    
+31.  p_nFisBankCount         <==>  p_nFixedSrcBankCount    unchange                                               unchange
+32.  p_nTotFisBankNum        <==>  p_nTotFixedSrcBankNum   unchange                                               unchange
+33.  p_nFisSrcCount          <==>  p_nFixedSrcCount        unchange                                               unchange
+34.  p_vFissionSrc           <==>  p_vFixedSrc             unchange                                               unchange
+35.  p_vFissionBank          <==>  p_vFixedSrcBank         unchange                                               unchange
+
+
+重构思路
+1. 对临界类和固定源类中重复的函数和变量进行整合
+2. 创建NeutronTransport类，光子输运有相应的PhotonTransport类，由于光子输运并不完善，此次重构为创建PhotonTransport类提供借鉴
+3. 关于临界类和固定源类如何引用NeutronTransport类，有两种方案，一种是在类中创建NeutronTransport类对象；另一种是采用C++高级功能——继承 
+4. 关于history函数，重构过程中发现其只是对各个基本输运函数的一个封装，因此将函数依旧保留在临界和固定源类中。

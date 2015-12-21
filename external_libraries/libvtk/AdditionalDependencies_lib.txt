@@ -1,0 +1,8 @@
+vtkIO.lib
+vtkFiltering.lib
+vtkCommon.lib
+advapi32.lib
+gdi32.lib
+user32.lib
+vtkzlib.lib
+vtksys.lib

@@ -1,0 +1,48 @@
+/c ORNL-4 Uranyl nitrate in H2O Sphere; HEU-SOL-THERM-013 case #4c and CSEWG: T-4
+Universe 0
+cell 1   -1 mat = 1
+cell 2   1 & -2 mat = 2
+cell 3   2 void = 1
+
+Surface
+surf 1   so 34.5948 
+surf 2   so 34.9148 
+
+Material
+/material cards 
+/Materials specified with atom densities 
+mat 1   1.00161279e-1
+  92234.30c  7.6139e-7
+  92235.30c  6.7926e-5
+  92236.30c  1.9599e-7
+  92238.30c  3.9659e-6
+  7014.30c  2.5463e-4
+  5010.30c  2.5472e-6
+  5011.30c  1.0253e-5
+  8016.30c  3.3857e-2
+  1001.30c  6.5964e-2
+mat 2   6.0317237e-2
+  13027.30c  5.9699e-2
+  14000.60c  5.5202e-4
+  25055.30c  1.4853e-5
+  29063.30c  3.55285e-05
+  29065.30c  1.58355e-05
+sab 1 lwtr.60t
+
+Criticality
+poweriter keff0 =  1.0  population = 1000 30 100 
+initsrc  point =   0 0 0
+
+/Special Input file!!!
+
+
+
+
+
+
+
+
+
+
+
+
